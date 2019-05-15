@@ -71,11 +71,13 @@ var lastresType = '';
 var sizelimiter = 0;
 var loading = true;
 
-socket.on('fightdata',function(newdata){
+
+
+socket.on('gameData',function(newdata){
 
 	setTimeout(function(){
 
-			if (lastresType == winnerdata) {
+			if (lastresType == newdata) {
 
 		  		if (newdata.gameresult == '2') {
 
