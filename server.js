@@ -105,23 +105,24 @@ function genRes(){
 						var jsonObj = {
 
 							rounds : rounds,
+							result : gameRes
 
 						}
 
 						
-							// var fs = require('fs');
-							// let data = JSON.stringify(jsonObj);
+							var fs = require('fs');
+							let data = JSON.stringify(jsonObj);
 
-							// setTimeout(function(){
-							// 	fs.writerfileSync('result.json' , data);
-							// },1000);
+							setTimeout(function(){
+								fs.writerfileSync('result.json' , data);
+							},1000);
 
 					setTimeout(function(){
-						// dbo.collection('game').insertOne(gameObj , function(eer , res){
-						// 	if (err) throw err;
-						// 	console.log('ROUNDS' + rounds + 'Recorded');
-						// 	db.close();
-						// });
+						dbo.collection('game').insertOne(gameObj , function(eer , res){
+							if (err) throw err;
+							console.log('ROUNDS' + rounds + 'Recorded');
+							db.close();
+						});
 					},1000);
 			
 			});
