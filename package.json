@@ -1,0 +1,23 @@
+{
+  "name": "cointoss",
+  "version": "0.0.1",
+  "description": "realtime cointoss",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.25",
+    "mongodb": "^3.2.3",
+    "save": "^2.3.3",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "run cointoss"
+  },
+  "keywords": [
+    "cointoss"
+  ],
+  "author": "bryan reyes",
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,306 @@
+body{
+	background-color: #171a1c!important;
+}
+
+.resultHolder {
+	border: solid 1px #fff;
+    border-bottom: none;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    background: #fff;
+    color: #000;
+    position: relative;
+}
+#goRight {
+	color: black;
+    background: transparent;
+    border: none;
+    font-size: 60px;
+    position: absolute;
+    top: 120px;
+    z-index: 555;
+    left: -60px;
+}
+.table-loading {
+	background: url('../images/loading.gif');
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	left: 48%;
+	z-index: 999;
+	top: 200px;
+	background-size: contain;
+	display: none;
+}
+.limit-holder {
+    width: 100%;
+    text-align: right;
+}
+.gameHolder{
+	margin-top: 100px;
+	max-width: 830px;
+	margin:auto;
+}
+.innerResult {	
+    position: relative;
+    background: url(../images/pattern_bg.png) repeat;
+    width: 830px;
+    min-height: 480px;
+    overflow-y: scroll;
+}
+
+
+.odd-sniff dt {
+	color : blue;
+	margin-bottom: 6px;
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 7px;
+}
+.dolly-tabs {
+	width: 100%;
+	text-align: center;
+	/*margin-top: 30px;*/
+    position: relative;
+
+}
+
+.dolly-tabs button {
+	width: 24.5%;
+	height: 50px;
+	background-color: #22272b;
+	border: none;
+	color: white;
+	font-weight: bold;
+	font-size: 1em;
+	border-top :1px solid white;
+	cursor: pointer;
+
+
+}
+
+.dolly-tabs button:focus {
+    outline: none;
+    border: none;
+
+}
+
+
+
+.circle-blue {
+	border: 2px solid blue;
+}
+
+
+.circle-red {
+	
+	border: 2px solid red;
+	
+}
+
+.circle-yellow {
+	border: 2px solid #e1c304;
+}
+
+
+.circle-black {
+	
+	border: 2px solid black
+	
+}
+
+
+
+
+
+.circle-blue {
+	border: 2px solid #386eb6;
+}
+
+
+.circle-red {
+	
+	border: 2px solid #ed2431;
+	
+}
+
+.circle-green {
+	
+	border: 2px solid #31b44b;
+	
+}
+
+
+
+.circle-north {
+	border: 2px solid #6ecff6;
+}
+
+
+.circle-east {
+	
+	border: 2px solid #be75b1;
+	
+}
+
+.circle-west {
+	
+	border: 2px solid #f16567;
+	
+}
+
+.circle-south {
+	
+	border: 2px solid #c9dd5f;
+	
+}
+
+
+.odd-sniff dt {
+	color : blue;
+	margin-bottom: 6px;
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 7px;
+}
+
+
+.even-sniff dt {
+	color : red;
+	margin-bottom: 6px;
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 7px;
+}
+
+.myellow dt{
+	color:  #e1c304;
+	margin-bottom: 6px;
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 7px;
+}
+
+.mblack dt{
+	color: black;
+	margin-bottom: 6px;
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 7px;
+}
+
+.sblue dt {
+	color:  #386eb6;
+	margin-bottom: 6px;
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 7px;
+}
+
+.sred dt {
+	color:  #ed2431;
+	margin-bottom: 6px;
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 7px;
+}
+
+.sgreen dt {
+	color:  #31b44b;
+	margin-bottom: 6px;
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 7px;
+}
+
+
+
+
+
+.res-circle {
+	height: 27px;
+	width: 27px;
+	border-radius: 100%;
+	text-align: center;
+	margin-left: 3px;
+	font-size: 10px;
+	padding-top: 5px;
+	font-weight: 600;
+}
+
+#goLeft {
+	color: black;
+    background: transparent;
+    border: none;
+    font-size: 60px;
+    position: absolute;
+    top: 120px;
+    z-index: 555;
+    right: -60px;
+}
+
+#goRight {
+	color: black;
+    background: transparent;
+    border: none;
+    font-size: 60px;
+    position: absolute;
+    top: 120px;
+    z-index: 555;
+    left: -60px;
+}
+.columns {
+	float: left;
+	width: 34px;
+}
+
+
+
+	}
+	.odd-sniff dt {
+	color : blue;
+	margin-bottom: 6px;
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 7px;
+}
+
+
+.even-sniff dt {
+	color : red;
+	margin-bottom: 6px;
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 7px;
+}
+
+@media only screen and (max-width:  600px) {
+	.dolly-tabs button {
+		width: 24%;
+		height: 50px;
+		background-color: #22272b;
+		border: none;
+		color: white;
+		font-weight: bold;
+		font-size: 1em;
+		border-top :1px solid white;
+		cursor: pointer;
+
+	}
+
+
+
+
+
+	#goLeft {
+		display: none;
+	}
+
+	#goRight {
+		display: none;
+	}
+	
+
+
+}
