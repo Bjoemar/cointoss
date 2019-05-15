@@ -110,12 +110,16 @@ function genRes(){
 						}
 
 						
-							// var fs = require('fs');
-							// let data = JSON.stringify(jsonObj);
 
-							// setTimeout(function(){
-							// 	fs.writerfileSync('result.json' , data);
-							// },1000);
+
+					  		var fs = require('fs');
+					  		let data = JSON.stringify(jsonObj);
+					
+
+					  		setTimeout(function(){
+					  			fs.writeFileSync('result.json', data);
+					  		},1000);
+
 
 					setTimeout(function(){
 						dbo.collection('game').insertOne(gameObj , function(eer , res){
