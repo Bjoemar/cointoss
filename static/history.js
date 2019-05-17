@@ -34,7 +34,7 @@ socket.on('loadDatahis' , function(data){
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
-			+pastdata._id+'</td><td class="result'+gameResColor+'">'
+			+pastdata._id+'</td><td class="result '+gameResColor+'">'
 			+gameRes+'</td></tr>')
 	}
 
@@ -226,7 +226,7 @@ socket.on('invalid' , function(data){
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
-			+pastdata._id+'</td><td class="result '+gameResColor+'">'
+			+pastdata._id+'</td><td class="result  '+gameResColor+'">'
 			+gameRes+'</td></tr>')
 		
 		}
@@ -255,7 +255,7 @@ socket.on('invalid' , function(data){
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
-			+pastdata._id+'</td><td class="result '+gameResColor+'">'
+			+pastdata._id+'</td><td class="result  '+gameResColor+'">'
 			+gameRes+'</td></tr>')
 		}
  })
