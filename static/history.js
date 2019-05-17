@@ -173,7 +173,14 @@ socket.on('resdata' , function(data){
 	if (data.length > 0) {
 		$('#invalidtxt').hide();
 		$('#result_round').html(data[0].rounds);
-		$('#result_num').html(data[0].gameresult);
+
+		if (data[0].gameresult == 1) {
+			var gameRes = 'R';
+		}else if(data[0].gameresult == 2 ){
+			var gameRes = 'B';
+		}
+
+		$('#result_num').html(gameRes);
 
 		$('#restext').show();
 

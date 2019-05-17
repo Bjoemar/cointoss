@@ -25,6 +25,7 @@ var today = new Date();
  $('.table-loading').show();
 
 
+
 $('#result-limit').change(function(){
 	$('.table-loading').show();
 	var result_limit = $('#result-limit option:selected').val();
@@ -74,17 +75,18 @@ var loading = true;
 
 
 socket.on('gameData',function(newdata){
+	// console.log(newdata)
 
 	setTimeout(function(){
 
 			if (lastresType == newdata) {
 
-		  		if (newdata.gameresult == '2') {
+		  		if (newdata.result == '2') {
 
 			  		lastresType = '2';
 			  		$('.innerResult .columns').last().append('<dd><div class="circle-blue res-circle">'+newdata.rounds+'</div></dd>');
 
-			  	} else if (newdata.gameresult == '1') {
+			  	} else if (newdata.result == '1') {
 
 			  		lastresType = '1';
 			  		$('.innerResult .columns').last().append('<dd><div class="circle-red res-circle">'+newdata.rounds+'</div></dd>');
@@ -95,12 +97,12 @@ socket.on('gameData',function(newdata){
 
 			 	innerwidth = (innerwidth + 35) - 1;
 
-			 	if (newdata.gameresult == '2') {
+			 	if (newdata.result == '2') {
 
 			 		lastresType = '2';
 			 		$('.innerResult').append('<dl class="columns sblue"><dt>B</dt><dd><div class="circle-blue res-circle">'+newdata.rounds+'</div></dd></dl>');
 
-			 	}else if (newdata.gameresult == '1'){
+			 	}else if (newdata.result == '1'){
 
 			 		lastresType = '1';
 			 		$('.innerResult').append('<dl class="columns sred"><dt>R</dt><dd><div class="circle-red res-circle">'+newdata.rounds+'</div></dd></dl>');
