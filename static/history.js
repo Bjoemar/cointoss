@@ -28,7 +28,7 @@ socket.on('loadDatahis' , function(data){
 				var gameResColor = 'rRes'
 			} else if (pastdata.gameresult == 2) {
 				var gameRes = 'B';
-				var gameResColor = 'BRes'
+				var gameResColor = 'bRes'
 			}
 
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
@@ -220,7 +220,7 @@ socket.on('invalid' , function(data){
 				var gameResColor = 'rRes'
 			} else if (pastdata.gameresult == 2) {
 				var gameRes = 'B';
-				var gameResColor = 'BRes'
+				var gameResColor = 'bRes'
 			}
 
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
@@ -248,7 +248,7 @@ socket.on('invalid' , function(data){
 				var gameResColor = 'rRes'
 			} else if (pastdata.gameresult == 2) {
 				var gameRes = 'B';
-				var gameResColor = 'BRes'
+				var gameResColor = 'bRes'
 			}
 
 
