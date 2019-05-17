@@ -22,11 +22,18 @@ socket.on('loadDatahis' , function(data){
 	for(p = 0; p < pastLen; p++){
 		var pastdata = data[p];
 
+
+			if (pastdata.gameresult == 1) {
+				var gameRes = 'R';
+			} else if (pastdata.gameresult == 2) {
+				var gameRes = 'B';
+			}
+
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
 			+pastdata._id+'</td><td class="result">'
-			+pastdata.gameresult+'</td></tr>')
+			+gameRes+'</td></tr>')
 	}
 
 
@@ -53,27 +60,28 @@ socket.on('pageCount',function(data) {
 
 
 function prevPage() {
-		if(records_per_page == pages){
 
-			current_page = current_page - 10;
+		if (records_per_page == pages) {
 
-			if(lastone == 0){
-				records_per_page = records_per_page - 10;
+				current_page = current_page - 10;
+
+				if (lastone == 0) {
+					records_per_page = records_per_page - 10;
+				} else {
+
+					records_per_page = records_per_page - lastone;
+				}
+				changePage();
 
 		} else {
 
-			records_per_page = records_per_page = lastone;
+			if (current_page > 1) {
+				current_page = current_page - 10;
+				records_per_page = records_per_page - 10;
+				changePage();
+			}
 
 		}
-		changePage();
-	} else {
-
-		if(current_page > 1 ){
-			current_page = current_page - 10;
-			records_per_page = records_per_page = 10;
-			changePage();
-		}
-	}
 }
 
 function nextPage() {
@@ -203,11 +211,18 @@ socket.on('invalid' , function(data){
 		for(p = 0; p < pastLen; p++) {
 
 			var pastdata = data[p];
+
+			if (pastdata.gameresult == 1) {
+				var gameRes = 'R';
+			} else if (pastdata.gameresult == 2) {
+				var gameRes = 'B';
+			}
+
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
 			+pastdata._id+'</td><td class="result">'
-			+pastdata.gameresult+'</td></tr>')
+			+gameRes+'</td></tr>')
 		
 		}
 
@@ -221,11 +236,18 @@ socket.on('invalid' , function(data){
 
 		for(p = 0; p < pastLen; p++) {
 		var pastdata = sortres[p];
+
+
+			if (pastdata.gameresult == 1) {
+				var gameRes = 'R';
+			} else if (pastdata.gameresult == 2) {
+				var gameRes = 'B';
+			}
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
 			+pastdata._id+'</td><td class="result">'
-			+pastdata.gameresult+'</td></tr>')
+			+gameRes+'</td></tr>')
 		}
  })
 
