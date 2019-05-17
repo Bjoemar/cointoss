@@ -32,7 +32,6 @@ app.get('/',function(request, response){
 	response.sendFile(path.join(__dirname, 'index.html'));
 })
 
-
 app.get('/gameresult',function(request, response){
 	response.sendFile(path.join(__dirname, 'gameresult.html'));
 })

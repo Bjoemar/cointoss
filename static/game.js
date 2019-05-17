@@ -126,17 +126,17 @@ socket.emit('newVisitors');
 
 						$('.imageContainer').html('<img class="gif" src="assets/images/coin-flip.gif">');
 
-						setTimeout(function(){
+						// setTimeout(function(){
 							
-							var  snd = new Howl({
+						// 	var  snd = new Howl({
 
-							src:['../assets/sounds/coinThing.mp3'],
-							volume :0.5,
-							});
+						// 	src:['../assets/sounds/coinThing.mp3'],
+						// 	volume :0.5,
+						// 	});
 
-							snd.play();
+						// 	snd.play();
 						
-						},700);
+						// },700);
 
 
 
@@ -159,13 +159,13 @@ socket.emit('newVisitors');
 							},1000);
 
 
-										var snd = new Howl({
+										// var snd = new Howl({
 
-											src: ['../assets/sounds/suck.ogg'],
+										// 	src: ['../assets/sounds/suck.ogg'],
 											
-											volume :0.5,
-										});
-										snd.play();
+										// 	volume :0.5,
+										// });
+										// snd.play();
 
 									$('.hand-bottom').animate({
 										'top' : '50px',
@@ -175,17 +175,17 @@ socket.emit('newVisitors');
 										'left' : '100px',
 									},250);
 
-										setTimeout(function(){
+										// setTimeout(function(){
 
-											var snd = new Howl({
+										// 	var snd = new Howl({
 
-												src:['../assets/sounds/tededen.mp3'],
+										// 		src:['../assets/sounds/tededen.mp3'],
 
-												volume :0.5,
-											});
-												snd.play();
+										// 		volume :0.5,
+										// 	});
+										// 		snd.play();
 
-											},3000);
+										// 	},3000);
 
 									setTimeout(function(){
 										$('.hand-top').animate({
