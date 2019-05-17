@@ -25,14 +25,16 @@ socket.on('loadDatahis' , function(data){
 
 			if (pastdata.gameresult == 1) {
 				var gameRes = 'R';
+				var gameResColor = 'rRes'
 			} else if (pastdata.gameresult == 2) {
 				var gameRes = 'B';
+				var gameResColor = 'BRes'
 			}
 
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
-			+pastdata._id+'</td><td class="result">'
+			+pastdata._id+'</td><td class="result'+gameResColor+'">'
 			+gameRes+'</td></tr>')
 	}
 
@@ -212,16 +214,19 @@ socket.on('invalid' , function(data){
 
 			var pastdata = data[p];
 
+
 			if (pastdata.gameresult == 1) {
 				var gameRes = 'R';
+				var gameResColor = 'rRes'
 			} else if (pastdata.gameresult == 2) {
 				var gameRes = 'B';
+				var gameResColor = 'BRes'
 			}
 
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
-			+pastdata._id+'</td><td class="result">'
+			+pastdata._id+'</td><td class="result '+gameResColor+'">'
 			+gameRes+'</td></tr>')
 		
 		}
@@ -240,13 +245,17 @@ socket.on('invalid' , function(data){
 
 			if (pastdata.gameresult == 1) {
 				var gameRes = 'R';
+				var gameResColor = 'rRes'
 			} else if (pastdata.gameresult == 2) {
 				var gameRes = 'B';
+				var gameResColor = 'BRes'
 			}
+
+
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
-			+pastdata._id+'</td><td class="result">'
+			+pastdata._id+'</td><td class="result '+gameResColor+'">'
 			+gameRes+'</td></tr>')
 		}
  })
