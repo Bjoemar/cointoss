@@ -77,6 +77,48 @@ socket.on('sec',function(seconds){
 });
 
 socket.emit('newVisitors');
+
+$(document).ready(function(){
+
+  if (document.readyState == 'interactive') {
+    var all = $("*");
+    var max = all.length; 
+    for (i = 0; i < max; i++) {
+      set_ele(all[i]);
+    }
+  }
+
+
+  function check_element(ele) {
+    var all = $('*');
+    var total_ele = all.length;
+    var per_inc =  all.length / 100;
+
+    if ($(ele).on()) {
+      var prog_percent = per_inc + parseInt($('#gamePercent').html());
+      prog_percent = Math.round(prog_percent);
+
+      if (prog_percent > 50) {
+        $('#gamePercent').html('100%');
+        setTimeout(function(){
+          $('#realbet-animation').fadeOut();
+        },2500)
+      } else {
+        $('#gamePercent').html(prog_percent+'%');
+      }
+      
+    } else {
+      set_ele(ele);
+    }
+  }
+
+  function set_ele(set_element) {
+    check_element(set_element);
+  }
+
+
+
+})
   
 
 

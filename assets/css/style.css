@@ -9,6 +9,27 @@
 /*  height: 500px;*/
 /*  border: 1px solid red;*/
 }
+
+
+#realbet-animation img {
+
+    width : 100px;
+    margin-bottom: 10px;
+
+}
+
+#realbet-animation {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    padding-top: 100px;
+    text-align: center;
+    background-color: #171a1c;
+    z-index: 100;
+    color: white;
+}
+
+
 body{
     background-color: #171a1c!important;
 }
@@ -178,4 +199,18 @@ width: 18%;
         font-size: 0.42em;
 
     }
+    
+
+
+    #realbet-animation img {
+
+        width : 100px;
+    }
+
+
+    #realbet-animation {
+        position: fixed;
+        padding-top: 70px;
+    }
+
 }
