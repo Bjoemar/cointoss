@@ -10,10 +10,12 @@ body{
 
 .rRes {
     color: red;
+    font-size: 20px;
 }
 
 .bRes {
     color: #37aee2;
+    font-size: 20px;
 }
 
 .gameresult{
@@ -303,6 +305,8 @@ table th {
         margin: auto;
     }
 }
+
+
 .m-seperator img {
     object-fit: contain;
     height: 100%;

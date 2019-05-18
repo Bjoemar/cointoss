@@ -176,8 +176,10 @@ socket.on('resdata' , function(data){
 
 		if (data[0].gameresult == 1) {
 			var gameRes = 'R';
+			$('#result_num').css('color' , 'red');
 		}else if(data[0].gameresult == 2 ){
 			var gameRes = 'B';
+			$('#result_num').css('color' , 'skyblue');
 		}
 
 		$('#result_num').html(gameRes);
