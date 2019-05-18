@@ -116,8 +116,6 @@ socket.on('loadData', function(data){
 var img = new Image();
 img.src = 'assets/images/coin-flip.gif';
 
-console.log(img.src)
-
 
 
 	socket.on('gameData',function(data){
