@@ -19,7 +19,7 @@ const crypto = require('crypto');
 app.set('port',5000);
 var ObjectId = require('mongodb').ObjectID;
 
-app.get('/admin',function(request, response){
+app.get('/F256A2DE2BAFCB6F53C42A3CB03087B61FEDCCB99D738C9F2DF93B7B5CC4605A',function(request, response){
 	response.sendFile(path.join(__dirname, 'admin.html'));
 })
 
