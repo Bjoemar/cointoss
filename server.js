@@ -105,9 +105,15 @@ function genRes(){
 
 						}
 
+						if (gameRes == 1) {
+							var apiRes = '1';
+						} else {
+							var apiRes = '2';
+						}
+
 						var jsonObj = {
 							rounds : rounds,
-							result : gameRes
+							result : apiRes
 						}
 
 					  		var fs = require('fs');
