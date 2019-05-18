@@ -18,6 +18,7 @@ h3{
 	display: inline-block;
 	border-radius: 25px;
 	padding: 5px;
+	object-fit: cover;
 }
 .coin-holder{
 	width: 250px;
