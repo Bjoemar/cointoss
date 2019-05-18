@@ -27,6 +27,10 @@ app.get('/tableresult',function(request, response){
 	response.sendFile(path.join(__dirname, 'tableresult.html'));
 })
 
+app.get('/result',function(request, response){
+	response.sendFile(path.join(__dirname, 'result.json'));
+})
+
 
 app.get('/',function(request, response){
 	response.sendFile(path.join(__dirname, 'index.html'));
@@ -102,14 +106,9 @@ function genRes(){
 						}
 
 						var jsonObj = {
-
 							rounds : rounds,
 							result : gameRes
-
 						}
-
-						
-
 
 					  		var fs = require('fs');
 					  		let data = JSON.stringify(jsonObj);

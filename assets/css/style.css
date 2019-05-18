@@ -95,6 +95,14 @@ width: 18%;
 .imageContainer {
     position: relative;
     overflow: hidden;
+    background: url('../images/background_result.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.coinAnimation {
+    height: 100%;
+    width: 100%;
 }
 .hand-bottom{
     position: absolute;

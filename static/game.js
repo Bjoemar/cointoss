@@ -5,7 +5,8 @@ socket.on('sec',function(seconds){
 
 	if(seconds <= 10){
 
-		$('.imageContainer').html('<img src="assets/images/waithand.jpg">');
+		$('.coinAnimation').show();
+		resetGame();
 	}
 
 	if (seconds < 10 ) {
@@ -79,125 +80,105 @@ socket.emit('newVisitors');
   
 
 
-	socket.on('loadData', function(data){
+socket.on('loadData', function(data){
 
-		
-		$('#topRounds').html(data[0].rounds + 1 );
-		$('.lvl span').html(data[0].rounds);
-		$('.hashCode span').html(data[0].hash);
+	
+	$('#topRounds').html(data[0].rounds + 1 );
+	$('.lvl span').html(data[0].rounds);
+	$('.hashCode span').html(data[0].hash);
 
-		$('.imageContainer').html('<img src="assets/images/background_result.png">');
-		$('.imageContainer').append('<img class="hand-bottom" src="assets/images/hand2.png">');
-		$('.imageContainer').append('<img class="hand-top" src="assets/images/hand3.png">');
+	$('.coinAnimation').hide();
 
+	if(data[0].gameresult == 1){
 
+		$('.r-res').show();
 
-		if(data[0].gameresult == 1){
+	} else if(data[0].gameresult == 2){
 
-			$('.imageContainer').append('<img class="coin-middle" src="assets/images/R.png">');
+		$('.b-res').show();
+	}
 
-		} else if(data[0].gameresult == 2){
+		$('.hands').show();
 
-			$('.imageContainer').append('<img class="coin-middle" src="assets/images/B.png">');
-		}
+		$('.hand-bottom').css({
+			'top' : '50px',
+		},250);
 
-			$('.hand-bottom').css({
-				'top' : '50px',
-			},250);
-
-			$('.hand-top').css({
-				'left' : '100px',
-				'top' : '-237px',
-			},250);
+		$('.hand-top').css({
+			'left' : '100px',
+			'top' : '-237px',
+		},250);
 
 
-	});
+});
+
+
+
+
 
 
 	socket.on('gameData',function(data){
 
-		setTimeout(function(){
 
+		setTimeout(function(){
 			$('#topRounds').html(data.rounds + 1);
 			$('.lvl span').html(data.rounds);
 		},1000);
 
+			
+
 		setTimeout(function(){
 
-						$('.imageContainer').html('<img class="gif" src="assets/images/coin-flip.gif">');
+			$('.coinAnimation').attr('src','assets/images/coin-flip.gif');
 
-						// setTimeout(function(){
+			setTimeout(function(){
+
+				$('.coinAnimation').attr('src','assets/images/coin-flip.jpg');
+				$('.coinAnimation').hide();
+
+					setTimeout(function(){
+						if(data.result == 1){
+
+							$('.r-res').show();
 							
-						// 	var  snd = new Howl({
+						} else if(data.result == 2){
 
-						// 	src:['../assets/sounds/coinThing.mp3'],
-						// 	volume :0.5,
-						// 	});
-
-						// 	snd.play();
-						
-						// },700);
+							$('.b-res').show();
+						}
+					},1000);
 
 
+					$('.hands').show();
 
+
+					$('.hand-bottom').animate({
+						'top' : '50px',
+					},250);
+
+					$('.hand-top').animate({
+						'left' : '80px',
+					},250);
 
 						setTimeout(function(){
-							$('.imageContainer').html('<img src="assets/images/background_result.png">');
-							$('.imageContainer').append('<img class="hand-bottom" src="assets/images/hand2.png">');
-							$('.imageContainer').append('<img class="hand-top" src="assets/images/hand3.png">');
+							$('.hand-top').animate({
+								'top' : '-230px',
+							},2000);
 
+						},2000)
 
-							setTimeout(function(){
-									if(data.result == 1){
-
-										$('.imageContainer').append('<img class="coin-middle" src="assets/images/R.png">');
-									
-									} else if(data.result == 2){
-
-										$('.imageContainer').append('<img class="coin-middle" src="assets/images/B.png">');
-									}
-							},1000);
-
-
-										// var snd = new Howl({
-
-										// 	src: ['../assets/sounds/suck.ogg'],
-											
-										// 	volume :0.5,
-										// });
-										// snd.play();
-
-									$('.hand-bottom').animate({
-										'top' : '50px',
-									},250);
-
-									$('.hand-top').animate({
-										'left' : '100px',
-									},250);
-
-										// setTimeout(function(){
-
-										// 	var snd = new Howl({
-
-										// 		src:['../assets/sounds/tededen.mp3'],
-
-										// 		volume :0.5,
-										// 	});
-										// 		snd.play();
-
-										// 	},3000);
-
-									setTimeout(function(){
-										$('.hand-top').animate({
-											'top' : '-230px',
-										},2000);
-
-								},2000)
-
-						},2000);
+				},2000);
 
 		},1000);
-	})
+	});
+
+
+function resetGame(){
+	$('.coin-middle').hide();
+	$('.hands').hide();
+	$('.hand-bottom').css('top' , '618px');
+	$('.hand-top').css('top' , '90px');
+	$('.hand-top').css('left' , '854px');
+}
 
 
 
