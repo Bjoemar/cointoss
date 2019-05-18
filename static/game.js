@@ -113,7 +113,10 @@ socket.on('loadData', function(data){
 });
 
 
+var img = new Image();
+img.src = 'assets/images/coin-flip.gif';
 
+console.log(img.src)
 
 
 
@@ -129,7 +132,7 @@ socket.on('loadData', function(data){
 
 		setTimeout(function(){
 
-			$('.coinAnimation').attr('src','assets/images/coin-flip.gif');
+			$('.coinAnimation').attr('src',img.src);
 
 			setTimeout(function(){
 
