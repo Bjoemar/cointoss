@@ -49,11 +49,10 @@ h3{
 	top: 4px;
 }
 .button-holder{
-	height: 35px;
+	height: 65px;
 	width: 250px;
 /*	border: 1px solid white;*/
 	border-bottom: 1px solid white;
-	padding-bottom: 10px;
 	text-align: center;
 }
 .button-holder button{
