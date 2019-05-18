@@ -116,7 +116,13 @@ width: 18%;
 .imageContainer {
     position: relative;
     overflow: hidden;
-    background: url('../images/background_result.png');
+    width: 830px;
+    margin: auto;
+ 
+}
+
+.gameplay-area {
+       background: url('../images/background_result.png');
     background-size: cover;
     background-position: center;
 }
