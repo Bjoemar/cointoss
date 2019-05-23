@@ -125,6 +125,7 @@ width: 18%;
        background: url('../images/background_result.png');
     background-size: cover;
     background-position: center;
+    zoom : 0.7;
 }
 
 .coinAnimation {
