@@ -20,7 +20,7 @@ body{
 
 .gameresult{
 	padding: 20px;
-    width: 1000px;
+    width: 830px;
     margin: auto;
 }
 .gameresult h4{
@@ -238,12 +238,13 @@ table th {
      padding: 2px;
 }
 
+
+
 @media only screen and (min-width: 600px) and (max-width: 992px) {
 
-.g-info{
-	font-size: 15px;
-}
-    color: #ffffff;
+    .g-info{
+    	font-size: 15px;
+        color: #ffffff;
         text-align: center;
         font-size: 28px;
     }  
