@@ -9,12 +9,12 @@ body{
 }
 
 .rRes {
-    color: red;
+    color: #37aee2;
     font-size: 20px;
 }
 
 .bRes {
-    color: #37aee2;
+    color: red;
     font-size: 20px;
 }
 
@@ -157,6 +157,7 @@ table td {
 
     font-size: 10px;
 }
+
 .gameresult h4 {
 
     color: #ffffff;
@@ -165,12 +166,14 @@ table td {
 
 }
 
+
 .gameresult {
 
     padding: 20px;
     width: 100%;
     margin: auto;
 }
+
 .searchForm {
 
     padding: 10px;
@@ -178,6 +181,7 @@ table td {
     width: 100%;
     
 }
+
 .boxtext {
 
     padding: 2px;
@@ -200,10 +204,12 @@ table td {
      background-color: #45b5da;
      border: none;
 }
+
 .hashHistory th, tr {
         
     font-size: 5px;
 }
+
  table td {
     height: 20px;
     border-bottom: 1px solid #2c2f36;
@@ -211,11 +217,13 @@ table td {
     color: #b2b2b2;
     text-align: center;
 }
+
 .gameresult {
     padding: 20px;
     width: 100%;
     margin: auto;
 }
+
 table th {
     background: #2c2f36;
     /*font-size: 14px;*/
@@ -225,10 +233,12 @@ table th {
         
     text-align: center;
 }
+
 .result-table{
 	font-size: 7px;
 	padding: 0;
 }
+
 
  #date-picker {
     text-align: center;
@@ -236,6 +246,7 @@ table th {
     width: 23%;
     font-size: 6.5px;
      padding: 2px;
+}
 }
 
 
