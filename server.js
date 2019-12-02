@@ -14,7 +14,7 @@ var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
 
 // var url = "mongodb://joemar12:joemar12@ds155646-a0.mlab.com:55646,ds155646-a1.mlab.com:55646/cointoss?replicaSet=rs-ds155646";
-var url = "mongodb+srv://joemar12:joemar12@cointoss-hbe6s.mongodb.net/test?retryWrites=true&w=majority";
+var url = "mongodb+srv://joemar12:joemar12@cointoss-oh6ud.mongodb.net/test?retryWrites=true&w=majority";
 const crypto = require('crypto');
 app.set('port',5000);
 var ObjectId = require('mongodb').ObjectID;
