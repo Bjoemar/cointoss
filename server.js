@@ -10,6 +10,8 @@ var moment = require('moment');
 require('moment-timezone');
 moment.tz('Asia/Tokyo');
 
+var request = require("request");
+
 var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
 
@@ -19,8 +21,52 @@ const crypto = require('crypto');
 app.set('port',5000);
 var ObjectId = require('mongodb').ObjectID;
 
-app.get('/F256A2DE2BAFCB6F53C42A3CB03087B61FEDCCB99D738C9F2DF93B7B5CC4605A',function(request, response){
-	response.sendFile(path.join(__dirname, 'admin.html'));
+app.get('/F256A2DE2BAFCB6F53C42A3CB03087B61FEDCCB99D738C9F2DF93B7B5CC4605A',function(req, res){
+
+	var url = "http://realbet365.net/realbet_access.json"
+
+
+	request({
+	    url: url,
+	    json: true
+	}, function (error, response, body) {
+
+	    if (!error && response.statusCode === 200) {
+
+	    	var access_list_count = body['ipadd'].length;
+	    	var access = false;
+	    	var active = true;
+	    	var userIp_add = req.headers['x-forwarded-for'].split(',')[0];
+
+	    		// Render All the ip address
+	    		for(i = 0; i < access_list_count; i++) 
+	    		{
+	    			if (body['ipadd'][i]['ip'] == userIp_add) {
+	    				access = true;
+	    				if (body['ipadd'][i]['status'] == 'INACTIVE') {
+	    					active = false;
+	    				} 
+	    			} 
+	    		}
+	    		
+	    		// If IP address MATCH ACESS
+			  	if (access) {
+			  		if (active) {
+			  			res.sendFile(path.join(__dirname, 'admin.html'));
+			  		} else {
+			  			res.send('YOUR IP HAS BEEN BLOCK !')
+			  		}
+			  	} else {
+			  		res.json({ status: '404 Not Found' })
+			  	}
+
+
+
+	        
+	    }
+	})
+
+
 })
 
 app.get('/tableresult',function(request, response){
