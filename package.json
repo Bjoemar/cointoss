@@ -10,7 +10,7 @@
     "mongodb": "^3.2.3",
     "request": "^2.88.0",
     "save": "^2.3.3",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.5.0"
   },
   "devDependencies": {},
   "scripts": {
